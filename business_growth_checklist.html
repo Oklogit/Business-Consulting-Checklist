@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Business Growth & Scaling Consulting Checklist</title>
+
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			body {
+				font-family: Arial, sans-serif;
+				background-color: #f5f5f5;
+				line-height: 1.6;
+				padding: 20px;
+			}
+
+			.container {
+				margin: 0 auto;
+				background-color: white;
+				padding: 30px;
+				border-radius: 8px;
+				box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+			}
+
+			h1 {
+				color: #333;
+				text-align: center;
+				margin-bottom: 30px;
+				font-size: 2rem;
+			}
+
+			.section {
+				margin-bottom: 30px;
+				border: 1px solid #ddd;
+				border-radius: 6px;
+				padding: 20px;
+				background-color: #fafafa;
+			}
+
+			.section h2 {
+				color: #2c3e50;
+				margin-bottom: 15px;
+				font-size: 1.3rem;
+				border-bottom: 2px solid #3498db;
+				padding-bottom: 5px;
+			}
+
+			.checkbox-item {
+				margin-bottom: 12px;
+				display: flex;
+				align-items: flex-start;
+				gap: 10px;
+			}
+
+			.checkbox-item input[type="checkbox"] {
+				margin-top: 4px;
+				transform: scale(1.2);
+				accent-color: #3498db;
+			}
+
+			.checkbox-item label {
+				color: #555;
+				cursor: pointer;
+				font-size: 0.95rem;
+			}
+
+			.submit-container {
+				text-align: center;
+				margin-top: 40px;
+				padding-top: 20px;
+				border-top: 2px solid #eee;
+			}
+			h3 {
+				color: #1f3449;
+				border-bottom: 2px solid #555;
+			}
+			.contact-info input {
+				background-color: #eee;
+				height: 30px;
+				border-radius: 6px;
+				padding-left: 1rem;
+			}
+			.contact-info {
+				display: flex;
+				flex-direction: column;
+				max-width: 500px;
+			}
+			.contact-info label {
+				color: #555;
+				font-weight: bold;
+				font-size: 1rem;
+			}
+			.submit-btn {
+				background-color: #27ae60;
+				color: white;
+				padding: 15px 40px;
+				border: none;
+				border-radius: 5px;
+				font-size: 1.1rem;
+				cursor: pointer;
+				transition: background-color 0.3s;
+			}
+
+			.submit-btn:hover {
+				background-color: #229954;
+			}
+
+			.extract-btn {
+				background-color: #3498db;
+				color: white;
+				padding: 10px 20px;
+				border: none;
+				border-radius: 5px;
+				font-size: 1rem;
+				cursor: pointer;
+				transition: background-color 0.3s;
+				margin-top: 15px;
+			}
+
+			.extract-btn:hover {
+				background-color: #2980b9;
+			}
+
+			.text-output {
+				margin-top: 20px;
+				padding: 15px;
+				background-color: #f8f9fa;
+				border: 1px solid #dee2e6;
+				border-radius: 5px;
+				font-family: monospace;
+				white-space: pre-wrap;
+				max-height: 300px;
+				overflow-y: auto;
+			}
+			.fa {
+				/*	background-color: red;*/
+				min-width: 20px;
+			}
+			#nextstepsdiv li:not(strong) {
+				color: #2c3e50;
+			}
+
+			@media (max-width: 600px) {
+				.container {
+					padding: 20px;
+				}
+
+				h1 {
+					font-size: 1.5rem;
+				}
+
+				.section h2 {
+					font-size: 1.1rem;
+				}
+			}
+		</style>
+		<script
+			type="text/javascript"
+			src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+		></script>
+		<script type="text/javascript">
+			(function () {
+				emailjs.init({
+					publicKey: "eGwGPywEjqm7syCgu",
+				});
+			})();
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Business Growth & Scaling Consulting Checklist</h1>
+
+			<form id="checklistForm" action="#" method="post">
+				<div class="section" id="business-fundamentals">
+					<h2 class="subcategory">Business Fundamentals</h2>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="vision-mission"
+							name="business-fundamentals[]"
+							value="Clearly defined vision, mission, and goals"
+						/>
+						<label for="vision-mission"
+							>Clearly defined vision, mission, and goals</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="business-model"
+							name="business-fundamentals[]"
+							value="Established business model and revenue streams"
+						/>
+						<label for="business-model"
+							>Established business model and revenue
+							streams</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="market-positioning"
+							name="business-fundamentals[]"
+							value="Competitive market positioning"
+						/>
+						<label for="market-positioning"
+							>Competitive market positioning</label
+						>
+					</div>
+				</div>
+
+				<div class="section" id="financial-readiness">
+					<h2 class="subcategory">Financial Readiness</h2>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="profitability"
+							name="financial-readiness[]"
+							value="Profitability or clear path to profitability"
+						/>
+						<label for="profitability"
+							>Profitability or clear path to profitability</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="financial-statements"
+							name="financial-readiness[]"
+							value="Accurate financial statements (P&L, balance sheet, cash flow)"
+						/>
+						<label for="financial-statements"
+							>Accurate financial statements (P&L, balance sheet,
+							cash flow)</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="budgeting-forecasting"
+							name="financial-readiness[]"
+							value="Budgeting and financial forecasting in place"
+						/>
+						<label for="budgeting-forecasting"
+							>Budgeting and financial forecasting in place</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="pricing-structure"
+							name="financial-readiness[]"
+							value="Scalable pricing and cost structure"
+						/>
+						<label for="pricing-structure"
+							>Scalable pricing and cost structure</label
+						>
+					</div>
+				</div>
+
+				<div class="section" id="sales-marketing">
+					<h2 class="subcategory">Sales & Marketing</h2>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="target-market"
+							name="sales-marketing[]"
+							value="Defined target market and customer personas"
+						/>
+						<label for="target-market"
+							>Defined target market and customer personas</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="brand-identity"
+							name="sales-marketing[]"
+							value="Strong brand identity and messaging"
+						/>
+						<label for="brand-identity"
+							>Strong brand identity and messaging</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="customer-strategies"
+							name="sales-marketing[]"
+							value="Effective customer acquisition and retention strategies"
+						/>
+						<label for="customer-strategies"
+							>Effective customer acquisition and retention
+							strategies</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="digital-marketing"
+							name="sales-marketing[]"
+							value="Digital marketing strategy (SEO, social media, email, ads)"
+						/>
+						<label for="digital-marketing"
+							>Digital marketing strategy (SEO, social media,
+							email, ads)</label
+						>
+					</div>
+				</div>
+
+				<div class="section" id="operations-scalability">
+					<h2 class="subcategory">Operations & Scalability</h2>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="documented-processes"
+							name="operations-scalability[]"
+							value="Documented processes and SOPs"
+						/>
+						<label for="documented-processes"
+							>Documented processes and SOPs</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="technology-automation"
+							name="operations-scalability[]"
+							value="Technology and automation in place for efficiency"
+						/>
+						<label for="technology-automation"
+							>Technology and automation in place for
+							efficiency</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="supply-chain"
+							name="operations-scalability[]"
+							value="Scalable supply chain and logistics systems"
+						/>
+						<label for="supply-chain"
+							>Scalable supply chain and logistics systems</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="quality-control"
+							name="operations-scalability[]"
+							value="Quality control measures in place"
+						/>
+						<label for="quality-control"
+							>Quality control measures in place</label
+						>
+					</div>
+				</div>
+
+				<div class="section" id="team-leadership">
+					<h2 class="subcategory">Team & Leadership</h2>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="leadership-team"
+							name="team-leadership[]"
+							value="Strong leadership team with growth mindset"
+						/>
+						<label for="leadership-team"
+							>Strong leadership team with growth mindset</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="organizational-structure"
+							name="team-leadership[]"
+							value="Defined organizational structure and roles"
+						/>
+						<label for="organizational-structure"
+							>Defined organizational structure and roles</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="employee-development"
+							name="team-leadership[]"
+							value="Employee development and retention strategies"
+						/>
+						<label for="employee-development"
+							>Employee development and retention
+							strategies</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="innovation-culture"
+							name="team-leadership[]"
+							value="Culture that supports innovation and scalability"
+						/>
+						<label for="innovation-culture"
+							>Culture that supports innovation and
+							scalability</label
+						>
+					</div>
+				</div>
+
+				<div class="section" id="technology-digital">
+					<h2 class="subcategory">
+						Technology & Digital Transformation
+					</h2>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="it-infrastructure"
+							name="technology-digital[]"
+							value="Reliable IT infrastructure and security measures"
+						/>
+						<label for="it-infrastructure"
+							>Reliable IT infrastructure and security
+							measures</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="crm-tools"
+							name="technology-digital[]"
+							value="CRM and business intelligence tools in use"
+						/>
+						<label for="crm-tools"
+							>CRM and business intelligence tools in use</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="data-analytics"
+							name="technology-digital[]"
+							value="Data analytics for decision-making"
+						/>
+						<label for="data-analytics"
+							>Data analytics for decision-making</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="scalable-software"
+							name="technology-digital[]"
+							value="Scalable software and automation tools"
+						/>
+						<label for="scalable-software"
+							>Scalable software and automation tools</label
+						>
+					</div>
+				</div>
+
+				<div class="section" id="market-expansion">
+					<h2 class="subcategory">Market Expansion Readiness</h2>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="expansion-opportunities"
+							name="market-expansion[]"
+							value="Opportunities for expansion identified (new markets/products)"
+						/>
+						<label for="expansion-opportunities"
+							>Opportunities for expansion identified (new
+							markets/products)</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="regulatory-compliance"
+							name="market-expansion[]"
+							value="Understanding of regulatory compliance for growth"
+						/>
+						<label for="regulatory-compliance"
+							>Understanding of regulatory compliance for
+							growth</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="expansion-plan"
+							name="market-expansion[]"
+							value="Plan for international or regional expansion"
+						/>
+						<label for="expansion-plan"
+							>Plan for international or regional expansion</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="partnerships"
+							name="market-expansion[]"
+							value="Partnerships and collaborations for scaling"
+						/>
+						<label for="partnerships"
+							>Partnerships and collaborations for scaling</label
+						>
+					</div>
+				</div>
+
+				<div class="section" id="risk-management">
+					<h2 class="subcategory">Risk Management & Compliance</h2>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="legal-compliance"
+							name="risk-management[]"
+							value="Legal and compliance requirements in check"
+						/>
+						<label for="legal-compliance"
+							>Legal and compliance requirements in check</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="risk-plan"
+							name="risk-management[]"
+							value="Risk management plan in place"
+						/>
+						<label for="risk-plan"
+							>Risk management plan in place</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="contingency-strategies"
+							name="risk-management[]"
+							value="Contingency and crisis management strategies"
+						/>
+						<label for="contingency-strategies"
+							>Contingency and crisis management strategies</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="cybersecurity"
+							name="risk-management[]"
+							value="Cybersecurity and data protection policies"
+						/>
+						<label for="cybersecurity"
+							>Cybersecurity and data protection policies</label
+						>
+					</div>
+				</div>
+				<div
+					id="nextstepsdiv"
+					style="
+						margin-top: 30px;
+						padding: 20px;
+						background-color: #e8f5e8;
+						border-radius: 8px;
+					"
+				>
+					<h3>Next Steps</h3>
+					<ul>
+						<li>
+							<strong>Review your responses:</strong> Identify
+							areas needing improvement before scaling.
+						</li>
+						<li>
+							<strong>Book a consultation:</strong> Let's develop
+							a tailored strategy for your business growth
+						</li>
+						<li>
+							<strong>Prepare for implementation:</strong> We'll
+							guide you through execution for sustainable success
+						</li>
+					</ul>
+				</div>
+				<div class="contact-info">
+					<h3>Please Enter your contact information</h3>
+					<label for="name">Name</label>
+					<input id="name" type="text" required />
+					<label for="mail">Email</label>
+					<input id="mail" type="mail" required />
+				</div>
+
+				<div class="submit-container">
+					<button type="submit" class="submit-btn">
+						Submit Checklist
+					</button>
+				</div>
+			</form>
+
+			<div
+				id="results"
+				style="
+					display: none;
+					margin-top: 30px;
+					padding: 20px;
+					background-color: #e8f5e8;
+					border-radius: 8px;
+				"
+			>
+				<h2>Selected Items Summary</h2>
+				<div id="resultsContent"></div>
+
+				<button
+					id="sendEmailBtn"
+					class="extract-btn"
+					onclick="sendMail()"
+				>
+					Send Email
+				</button>
+				<div
+					id="textOutput"
+					class="text-output"
+					style="display: none"
+				></div>
+			</div>
+		</div>
+		<script>
+			let form = document.getElementById("checklistForm");
+			let submitBtn = document.getElementsByClassName("submit-btn");
+
+			form.addEventListener("submit", function (event) {
+				event.preventDefault();
+
+				const sections = [
+					"business-fundamentals",
+					"financial-readiness",
+					"sales-marketing",
+					"operations-scalability",
+					"team-leadership",
+					"technology-digital",
+					"market-expansion",
+					"risk-management",
+				];
+
+				const results = {};
+
+				sections.forEach((sectionId) => {
+					const section = document.getElementById(sectionId);
+					const checkboxes = section.querySelectorAll(
+						'input[type="checkbox"]:checked'
+					);
+					const sectionTitle =
+						section.querySelector("h2").textContent;
+
+					if (checkboxes.length > 0) {
+						results[sectionTitle] = [];
+						checkboxes.forEach((checkbox) => {
+							results[sectionTitle].push(checkbox.value);
+						});
+					}
+				});
+				displayResults(results);
+			});
+
+			// Global variable to store plain text results
+			let plainTextSummary = "";
+
+			function displayResults(results) {
+				const resultsDiv = document.getElementById("results");
+				const resultsContent =
+					document.getElementById("resultsContent");
+
+				// Clear previous plain text summary
+				plainTextSummary = "";
+
+				if (Object.keys(results).length === 0) {
+					resultsContent.innerHTML = "<p>No items were selected.</p>";
+					plainTextSummary = "No items were selected.";
+				} else {
+					let html = "";
+
+					Object.keys(results).forEach((category) => {
+						html += '<div style="margin-bottom: 20px;">';
+						html +=
+							'<h3 style="color: #2c3e50; margin-bottom: 10px;">' +
+							category +
+							"</h3>";
+						html +=
+							'<ul style="list-style-type: none; padding-left: 0;">';
+
+						// Add category to plain text summary
+						plainTextSummary += category + ":" + "\n";
+
+						results[category].forEach((item) => {
+							html +=
+								'<li style="margin-bottom: 5px; padding: 5px; background-color: white; border-radius: 4px;">✓ ' +
+								item +
+								"</li>";
+
+							// Add item to plain text summary
+							plainTextSummary += " • " + item + "\n";
+						});
+
+						html += "</ul></div>";
+						plainTextSummary += "\n"; // Added spacing between categories
+					});
+
+					resultsContent.innerHTML = html;
+				}
+
+				resultsDiv.style.display = "block";
+				resultsDiv.scrollIntoView({ behavior: "smooth" });
+
+				// Log the plain text summary for debugging
+				console.log("Plain text summary:", plainTextSummary);
+			}
+
+			// Email function to send the checklist summary
+			const sendMail = () => {
+				let params = {
+					name: document.getElementById("name").value,
+					mail: document.getElementById("mail").value,
+					subject:
+						"Client Request - Business Growth & Scaling Checklist",
+					message: plainTextSummary,
+				};
+
+				console.log("Email params:", params);
+				emailjs
+					.send("service_", "template_", params)
+					.then(() => window.alert("Email sent!"))
+					.catch((error) => {
+						console.error("Email failed to send:", error);
+						window.alert("Failed to send email. Please try again.");
+					});
+			};
+		</script>
+	</body>
+</html>

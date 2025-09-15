@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Business Planning & Financial Checklist</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			body {
+				font-family: Arial, sans-serif;
+				background-color: #f5f5f5;
+				line-height: 1.6;
+				padding: 20px;
+			}
+
+			.container {
+				margin: 0 auto;
+				background-color: white;
+				padding: 30px;
+				border-radius: 8px;
+				box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+			}
+
+			h1 {
+				color: #333;
+				text-align: center;
+				margin-bottom: 30px;
+				font-size: 2rem;
+			}
+
+			.section {
+				margin-bottom: 30px;
+				border: 1px solid #ddd;
+				border-radius: 6px;
+				padding: 20px;
+				background-color: #fafafa;
+			}
+
+			.section h2 {
+				color: #2c3e50;
+				margin-bottom: 15px;
+				font-size: 1.3rem;
+				border-bottom: 2px solid #3498db;
+				padding-bottom: 5px;
+			}
+
+			.checkbox-item {
+				margin-bottom: 12px;
+				display: flex;
+				align-items: flex-start;
+				gap: 10px;
+			}
+
+			.checkbox-item input[type="checkbox"] {
+				margin-top: 4px;
+				transform: scale(1.2);
+				accent-color: #3498db;
+			}
+
+			.checkbox-item label {
+				color: #555;
+				cursor: pointer;
+				font-size: 0.95rem;
+			}
+
+			.submit-container {
+				text-align: center;
+				margin-top: 40px;
+				padding-top: 20px;
+				border-top: 2px solid #eee;
+			}
+			h3 {
+				color: #1f3449;
+				border-bottom: 2px solid #555;
+			}
+			input[type="text"] {
+				background-color: #eee;
+				height: 30px;
+				border-radius: 6px;
+				padding-left: 1rem;
+			}
+			.contact-info {
+				display: flex;
+				flex-direction: column;
+				max-width: 500px;
+			}
+			.contact-info label {
+				color: #555;
+				font-weight: bold;
+				font-size: 1rem;
+			}
+			.submit-btn {
+				background-color: #27ae60;
+				color: white;
+				padding: 15px 40px;
+				border: none;
+				border-radius: 5px;
+				font-size: 1.1rem;
+				cursor: pointer;
+				transition: background-color 0.3s;
+			}
+
+			.submit-btn:hover {
+				background-color: #229954;
+			}
+
+			.extract-btn {
+				background-color: #3498db;
+				color: white;
+				padding: 10px 20px;
+				border: none;
+				border-radius: 5px;
+				font-size: 1rem;
+				cursor: pointer;
+				transition: background-color 0.3s;
+				margin-top: 15px;
+			}
+
+			.extract-btn:hover {
+				background-color: #2980b9;
+			}
+
+			.text-output {
+				margin-top: 20px;
+				padding: 15px;
+				background-color: #f8f9fa;
+				border: 1px solid #dee2e6;
+				border-radius: 5px;
+				font-family: monospace;
+				white-space: pre-wrap;
+				max-height: 300px;
+				overflow-y: auto;
+			}
+			#nextstepsdiv li:not(strong) {
+				color: #2c3e50;
+			}
+
+			@media (max-width: 600px) {
+				.container {
+					padding: 20px;
+				}
+
+				h1 {
+					font-size: 1.5rem;
+				}
+
+				.section h2 {
+					font-size: 1.1rem;
+				}
+			}
+		</style>
+		<script
+			type="text/javascript"
+			src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+		></script>
+		<script type="text/javascript">
+			(function () {
+				emailjs.init({
+					publicKey: "eGwGPywEjqm7syCgu",
+				});
+			})();
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Business Planning & Financial Checklist</h1>
+
+			<form id="checklistForm" action="#" method="post">
+				<div class="section" id="business-strategy">
+					<h2 class="subcategory">Business Strategy & Planning</h2>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="vision-mission-values"
+							name="business-strategy[]"
+							value="Clear vision, mission, and core values"
+						/>
+						<label for="vision-mission-values"
+							>Clear vision, mission, and core values</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="business-model-value"
+							name="business-strategy[]"
+							value="Defined business model and unique value proposition"
+						/>
+						<label for="business-model-value"
+							>Defined business model and unique value
+							proposition</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="strategic-goals"
+							name="business-strategy[]"
+							value="Short-term and long-term strategic goals"
+						/>
+						<label for="strategic-goals"
+							>Short-term and long-term strategic goals</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="market-research"
+							name="business-strategy[]"
+							value="Market research and competitive analysis"
+						/>
+						<label for="market-research"
+							>Market research and competitive analysis</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="business-structure"
+							name="business-strategy[]"
+							value="Scalable business structure and legal entity setup"
+						/>
+						<label for="business-structure"
+							>Scalable business structure and legal entity
+							setup</label
+						>
+					</div>
+				</div>
+
+				<div class="section" id="product-service">
+					<h2 class="subcategory">Product & Service Offering</h2>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="defined-products"
+							name="product-service[]"
+							value="Well-defined products or services"
+						/>
+						<label for="defined-products"
+							>Well-defined products or services</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="pricing-strategy"
+							name="product-service[]"
+							value="Competitive pricing strategy"
+						/>
+						<label for="pricing-strategy"
+							>Competitive pricing strategy</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="product-market-fit"
+							name="product-service[]"
+							value="Product-market fit validation"
+						/>
+						<label for="product-market-fit"
+							>Product-market fit validation</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="supply-distribution"
+							name="product-service[]"
+							value="Strong supply chain and distribution channels"
+						/>
+						<label for="supply-distribution"
+							>Strong supply chain and distribution
+							channels</label
+						>
+					</div>
+				</div>
+
+				<div class="section" id="financial-health">
+					<h2 class="subcategory">Financial Health & Readiness</h2>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="accurate-statements"
+							name="financial-health[]"
+							value="Accurate financial statements (P&L, balance sheet, cash flow)"
+						/>
+						<label for="accurate-statements"
+							>Accurate financial statements (P&L, balance sheet,
+							cash flow)</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="positive-cash-flow"
+							name="financial-health[]"
+							value="Positive cash flow or a clear path to profitability"
+						/>
+						<label for="positive-cash-flow"
+							>Positive cash flow or a clear path to
+							profitability</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="expense-control"
+							name="financial-health[]"
+							value="Well-managed business expenses and cost control measures"
+						/>
+						<label for="expense-control"
+							>Well-managed business expenses and cost control
+							measures</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="tax-compliance"
+							name="financial-health[]"
+							value="Business tax compliance and reporting in place"
+						/>
+						<label for="tax-compliance"
+							>Business tax compliance and reporting in
+							place</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="working-capital"
+							name="financial-health[]"
+							value="Working capital and liquidity assessment"
+						/>
+						<label for="working-capital"
+							>Working capital and liquidity assessment</label
+						>
+					</div>
+				</div>
+
+				<div class="section" id="budgeting-forecasting">
+					<h2 class="subcategory">Budgeting & Forecasting</h2>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="annual-budget"
+							name="budgeting-forecasting[]"
+							value="Annual budget covering all operational and growth costs"
+						/>
+						<label for="annual-budget"
+							>Annual budget covering all operational and growth
+							costs</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="revenue-forecasting"
+							name="budgeting-forecasting[]"
+							value="Revenue forecasting and financial projections"
+						/>
+						<label for="revenue-forecasting"
+							>Revenue forecasting and financial
+							projections</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="break-even-analysis"
+							name="budgeting-forecasting[]"
+							value="Break-even analysis to determine profitability timeline"
+						/>
+						<label for="break-even-analysis"
+							>Break-even analysis to determine profitability
+							timeline</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="scenario-planning"
+							name="budgeting-forecasting[]"
+							value="Scenario planning for financial risks"
+						/>
+						<label for="scenario-planning"
+							>Scenario planning for financial risks</label
+						>
+					</div>
+				</div>
+
+				<div class="section" id="funding-investment">
+					<h2 class="subcategory">Funding & Investment Readiness</h2>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="funding-strategy"
+							name="funding-investment[]"
+							value="Clear funding strategy (bootstrapping, loans, investors, grants)"
+						/>
+						<label for="funding-strategy"
+							>Clear funding strategy (bootstrapping, loans,
+							investors, grants)</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="pitch-deck"
+							name="funding-investment[]"
+							value="Investor pitch deck or business plan ready"
+						/>
+						<label for="pitch-deck"
+							>Investor pitch deck or business plan ready</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="creditworthiness"
+							name="funding-investment[]"
+							value="Creditworthiness and financing options explored"
+						/>
+						<label for="creditworthiness"
+							>Creditworthiness and financing options
+							explored</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="debt-equity-evaluation"
+							name="funding-investment[]"
+							value="Debt vs. equity financing evaluation"
+						/>
+						<label for="debt-equity-evaluation"
+							>Debt vs. equity financing evaluation</label
+						>
+					</div>
+				</div>
+
+				<div class="section" id="sales-revenue">
+					<h2 class="subcategory">Sales & Revenue Growth</h2>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="target-audience"
+							name="sales-revenue[]"
+							value="Defined target audience and customer personas"
+						/>
+						<label for="target-audience"
+							>Defined target audience and customer
+							personas</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="acquisition-retention"
+							name="sales-revenue[]"
+							value="Clear customer acquisition and retention strategies"
+						/>
+						<label for="acquisition-retention"
+							>Clear customer acquisition and retention
+							strategies</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="sales-pipeline"
+							name="sales-revenue[]"
+							value="Sales pipeline and conversion tracking"
+						/>
+						<label for="sales-pipeline"
+							>Sales pipeline and conversion tracking</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="recurring-revenue"
+							name="sales-revenue[]"
+							value="Recurring revenue models or upsell strategies"
+						/>
+						<label for="recurring-revenue"
+							>Recurring revenue models or upsell
+							strategies</label
+						>
+					</div>
+				</div>
+
+				<div class="section" id="risk-compliance">
+					<h2 class="subcategory">Risk Management & Compliance</h2>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="business-insurance"
+							name="risk-compliance[]"
+							value="Business insurance coverage (liability, property, etc.)"
+						/>
+						<label for="business-insurance"
+							>Business insurance coverage (liability, property,
+							etc.)</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="legal-contracts"
+							name="risk-compliance[]"
+							value="Legal contracts and agreements in place"
+						/>
+						<label for="legal-contracts"
+							>Legal contracts and agreements in place</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="regulatory-compliance"
+							name="risk-compliance[]"
+							value="Regulatory and industry compliance checks"
+						/>
+						<label for="regulatory-compliance"
+							>Regulatory and industry compliance checks</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="contingency-planning"
+							name="risk-compliance[]"
+							value="Contingency planning for unexpected financial downturns"
+						/>
+						<label for="contingency-planning"
+							>Contingency planning for unexpected financial
+							downturns</label
+						>
+					</div>
+				</div>
+
+				<div class="section" id="technology-automation">
+					<h2 class="subcategory">
+						Technology & Financial Automation
+					</h2>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="accounting-software"
+							name="technology-automation[]"
+							value="Accounting software implemented (e.g., QuickBooks, Xero)"
+						/>
+						<label for="accounting-software"
+							>Accounting software implemented (e.g., QuickBooks,
+							Xero)</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="payroll-tax-automation"
+							name="technology-automation[]"
+							value="Payroll and tax automation systems in place"
+						/>
+						<label for="payroll-tax-automation"
+							>Payroll and tax automation systems in place</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="crm-system"
+							name="technology-automation[]"
+							value="Customer relationship management (CRM) system for sales tracking"
+						/>
+						<label for="crm-system"
+							>Customer relationship management (CRM) system for
+							sales tracking</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="data-security"
+							name="technology-automation[]"
+							value="Data security and cybersecurity measures"
+						/>
+						<label for="data-security"
+							>Data security and cybersecurity measures</label
+						>
+					</div>
+				</div>
+				<div
+					id="nextstepsdiv"
+					style="
+						margin-top: 30px;
+						padding: 20px;
+						background-color: #e8f5e8;
+						border-radius: 8px;
+					"
+				>
+					<h3>Next Steps</h3>
+					<ul>
+						<li>
+							<strong>Identify Gaps:</strong> Review your
+							checklist responses to find areas needing
+							improvement
+						</li>
+						<li>
+							<strong>Schedule a Consultation:</strong> Let's
+							create a solid business and financial growth plan
+						</li>
+						<li>
+							<strong>Implement & Scale:</strong> Work together to
+							optimize operations and financial health.
+						</li>
+					</ul>
+				</div>
+				<div class="contact-info">
+					<h3>Please Enter your contact information</h3>
+					<label for="name">Name</label>
+					<input id="name" type="text" required />
+					<label for="mail">Email</label>
+					<input id="mail" type="text" required />
+				</div>
+
+				<div class="submit-container">
+					<button type="submit" class="submit-btn">
+						Submit Checklist
+					</button>
+				</div>
+			</form>
+
+			<div
+				id="results"
+				style="
+					display: none;
+					margin-top: 30px;
+					padding: 20px;
+					background-color: #e8f5e8;
+					border-radius: 8px;
+				"
+			>
+				<h2>Selected Items Summary</h2>
+				<div id="resultsContent"></div>
+
+				<button
+					id="sendEmailBtn"
+					class="extract-btn"
+					onclick="sendMail()"
+				>
+					Send Email
+				</button>
+				<div
+					id="textOutput"
+					class="text-output"
+					style="display: none"
+				></div>
+			</div>
+		</div>
+
+		<script>
+			let form = document.getElementById("checklistForm");
+			let submitBtn = document.getElementsByClassName("submit-btn");
+
+			form.addEventListener("submit", function (event) {
+				event.preventDefault();
+
+				const sections = [
+					"business-strategy",
+					"product-service",
+					"financial-health",
+					"budgeting-forecasting",
+					"funding-investment",
+					"sales-revenue",
+					"risk-compliance",
+					"technology-automation",
+				];
+
+				const results = {};
+
+				sections.forEach((sectionId) => {
+					const section = document.getElementById(sectionId);
+					const checkboxes = section.querySelectorAll(
+						'input[type="checkbox"]:checked'
+					);
+					const sectionTitle =
+						section.querySelector("h2").textContent;
+
+					if (checkboxes.length > 0) {
+						results[sectionTitle] = [];
+						checkboxes.forEach((checkbox) => {
+							results[sectionTitle].push(checkbox.value);
+						});
+					}
+				});
+				displayResults(results);
+			});
+
+			// Global variable to store plain text results
+			let plainTextSummary = "";
+
+			function displayResults(results) {
+				const resultsDiv = document.getElementById("results");
+				const resultsContent =
+					document.getElementById("resultsContent");
+
+				// Clear previous plain text summary
+				plainTextSummary = "";
+
+				if (Object.keys(results).length === 0) {
+					resultsContent.innerHTML = "<p>No items were selected.</p>";
+					plainTextSummary = "No items were selected.";
+				} else {
+					let html = "";
+
+					Object.keys(results).forEach((category) => {
+						html += '<div style="margin-bottom: 20px;">';
+						html +=
+							'<h3 style="color: #2c3e50; margin-bottom: 10px;">' +
+							category +
+							"</h3>";
+						html +=
+							'<ul style="list-style-type: none; padding-left: 0;">';
+
+						// Add category to plain text summary
+						plainTextSummary += category + ":" + "\n";
+
+						results[category].forEach((item) => {
+							html +=
+								'<li style="margin-bottom: 5px; padding: 5px; background-color: white; border-radius: 4px;">✓ ' +
+								item +
+								"</li>";
+
+							// Add item to plain text summary
+							plainTextSummary += " • " + item + "\n";
+						});
+
+						html += "</ul></div>";
+						plainTextSummary += "\n"; // Add spacing between categories
+					});
+
+					resultsContent.innerHTML = html;
+				}
+
+				resultsDiv.style.display = "block";
+				resultsDiv.scrollIntoView({ behavior: "smooth" });
+
+				// Log the plain text summary for debugging
+				console.log("Plain text summary:", plainTextSummary);
+			}
+
+			// Email function to send the checklist summary
+			const sendMail = () => {
+				let params = {
+					name: document.getElementById("name").value,
+					mail: document.getElementById("mail").value,
+					subject:
+						"Client Request - Business Planning & Financial Checklist",
+					message: plainTextSummary,
+				};
+
+				console.log("Email params:", params);
+				emailjs
+					.send("service_", "template_", params)
+					.then(() => window.alert("Email sent!"))
+					.catch((error) => {
+						console.error("Email failed to send:", error);
+						window.alert("Failed to send email. Please try again.");
+					});
+			};
+		</script>
+	</body>
+</html>

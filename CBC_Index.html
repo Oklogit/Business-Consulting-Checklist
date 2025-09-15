@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Client Bookkeeping Checklist</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			body {
+				font-family: Arial, sans-serif;
+				background-color: #f5f5f5;
+				line-height: 1.6;
+				padding: 20px;
+			}
+
+			.container {
+				margin: 0 auto;
+				background-color: white;
+				padding: 30px;
+				border-radius: 8px;
+				box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+			}
+
+			h1 {
+				color: #333;
+				text-align: center;
+				margin-bottom: 30px;
+				font-size: 2rem;
+				/* text-transform: uppercase; */
+			}
+
+			.section {
+				margin-bottom: 30px;
+				border: 1px solid #ddd;
+				border-radius: 6px;
+				padding: 20px;
+				background-color: #fafafa;
+			}
+
+			.section h2 {
+				color: #2c3e50;
+				margin-bottom: 15px;
+				font-size: 1.3rem;
+				border-bottom: 2px solid #3498db;
+				padding-bottom: 5px;
+			}
+
+			.checkbox-item {
+				margin-bottom: 12px;
+				display: flex;
+				align-items: flex-start;
+				gap: 10px;
+			}
+
+			.checkbox-item input[type="checkbox"] {
+				margin-top: 4px;
+				transform: scale(1.2);
+				accent-color: #3498db;
+			}
+
+			.checkbox-item label {
+				color: #555;
+				cursor: pointer;
+				font-size: 0.95rem;
+			}
+
+			.submit-container {
+				text-align: center;
+				margin-top: 40px;
+				padding-top: 20px;
+				border-top: 2px solid #eee;
+			}
+			h3 {
+				color: #1f3449;
+				border-bottom: 2px solid #555;
+			}
+			input[type="text"] {
+				background-color: #eee;
+				/* color: #555; */
+				height: 30px;
+				border-radius: 6px;
+				padding-left: 1rem;
+			}
+			.contact-info {
+				display: flex;
+				flex-direction: column;
+				max-width: 500px;
+				/* place-self: center; */
+			}
+			.contact-info label {
+				color: #555;
+				font-weight: bold;
+				font-size: 1rem;
+			}
+			.submit-btn {
+				background-color: #27ae60;
+				color: white;
+				padding: 15px 40px;
+				border: none;
+				border-radius: 5px;
+				font-size: 1.1rem;
+				cursor: pointer;
+				transition: background-color 0.3s;
+			}
+
+			.submit-btn:hover {
+				background-color: #229954;
+			}
+
+			.extract-btn {
+				background-color: #3498db;
+				color: white;
+				padding: 10px 20px;
+				border: none;
+				border-radius: 5px;
+				font-size: 1rem;
+				cursor: pointer;
+				transition: background-color 0.3s;
+				margin-top: 15px;
+			}
+
+			.extract-btn:hover {
+				background-color: #2980b9;
+			}
+
+			.text-output {
+				margin-top: 20px;
+				padding: 15px;
+				background-color: #f8f9fa;
+				border: 1px solid #dee2e6;
+				border-radius: 5px;
+				font-family: monospace;
+				white-space: pre-wrap;
+				max-height: 300px;
+				overflow-y: auto;
+			}
+
+			@media (max-width: 600px) {
+				.container {
+					padding: 20px;
+				}
+
+				h1 {
+					font-size: 1.5rem;
+				}
+
+				.section h2 {
+					font-size: 1.1rem;
+				}
+			}
+		</style>
+		<!-- <link rel="stylesheet" href="styles.css" /> -->
+		<script
+			type="text/javascript"
+			src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+		></script>
+		<script type="text/javascript">
+			(function () {
+				emailjs.init({
+					publicKey: "eGwGPywEjqm7syCgu",
+				});
+			})();
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Client Bookkeeping Checklist</h1>
+
+			<form id="checklistForm" action="#" method="post">
+				<div class="section" id="client-information">
+					<h2 class="subcategory">Client Information</h2>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="business-name"
+							name="client-info[]"
+							value="Business Name and Structure"
+						/>
+						<label for="business-name"
+							>Business Name and Structure (Sole Proprietor,
+							Partnership, LLC, Corporation)</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="tax-id"
+							name="client-info[]"
+							value="Tax Identification Number"
+						/>
+						<label for="tax-id"
+							>Tax Identification Number (TIN) or Business
+							Number</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="contact-info"
+							name="client-info[]"
+							value="Contact Information"
+						/>
+						<label for="contact-info"
+							>Contact Information (Phone number, Email address,
+							Business address)</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="bank-details"
+							name="client-info[]"
+							value="Business Bank Account Details"
+						/>
+						<label for="bank-details"
+							>Business Bank Account Details (Bank name, Account
+							number, Online banking access)</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="accounting-system"
+							name="client-info[]"
+							value="Accounting System Used"
+						/>
+						<label for="accounting-system"
+							>Accounting System Used (QuickBooks, Xero,
+							FreshBooks, Excel, etc.)</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="accounting-method"
+							name="client-info[]"
+							value="Accounting Method"
+						/>
+						<label for="accounting-method"
+							>Accounting Method (Cash-based or accrual
+							accounting)</label
+						>
+					</div>
+				</div>
+
+				<div class="section" id="financial-documents">
+					<h2 class="subcategory">Financial Documents</h2>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="bank-statements"
+							name="financial-docs[]"
+							value="Bank Statements"
+						/>
+						<label for="bank-statements"
+							>Bank Statements (for all business accounts)</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="credit-statements"
+							name="financial-docs[]"
+							value="Credit Card Statements"
+						/>
+						<label for="credit-statements"
+							>Credit Card Statements (if applicable)</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="receipts-invoices"
+							name="financial-docs[]"
+							value="Receipts and Invoices"
+						/>
+						<label for="receipts-invoices"
+							>Receipts and Invoices (for purchases, sales, and
+							other transactions)</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="payroll-records"
+							name="financial-docs[]"
+							value="Payroll Records"
+						/>
+						<label for="payroll-records"
+							>Payroll Records (if the client has
+							employees)</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="accounts-receivable"
+							name="financial-docs[]"
+							value="Accounts Receivable Aging Report"
+						/>
+						<label for="accounts-receivable"
+							>Accounts Receivable Aging Report (Outstanding
+							client invoices)</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="accounts-payable"
+							name="financial-docs[]"
+							value="Accounts Payable Aging Report"
+						/>
+						<label for="accounts-payable"
+							>Accounts Payable Aging Report (Outstanding vendor
+							bills)</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="loan-statements"
+							name="financial-docs[]"
+							value="Loan Statements"
+						/>
+						<label for="loan-statements"
+							>Loan Statements (if any loans are taken out by the
+							business)</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="tax-returns"
+							name="financial-docs[]"
+							value="Tax Returns and Supporting Documents"
+						/>
+						<label for="tax-returns"
+							>Tax Returns and Supporting Documents (last year's
+							tax return, any forms like W-2, 1099, etc.)</label
+						>
+					</div>
+				</div>
+
+				<div class="section" id="revenue-and-income">
+					<h2 class="subcategory">Revenue and Income</h2>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="sales-invoices"
+							name="revenue-income[]"
+							value="Sales Invoices"
+						/>
+						<label for="sales-invoices"
+							>Sales Invoices (Details of products/services
+							sold)</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="payment-receipts"
+							name="revenue-income[]"
+							value="Payment Receipts"
+						/>
+						<label for="payment-receipts"
+							>Payment Receipts (Proof of payment received from
+							clients)</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="sales-reports"
+							name="revenue-income[]"
+							value="Sales Reports"
+						/>
+						<label for="sales-reports"
+							>Sales Reports (For the period being
+							reviewed)</label
+						>
+					</div>
+				</div>
+
+				<div class="section" id="expenses-and-deductions">
+					<h2 class="subcategory">Expenses and Deductions</h2>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="vendor-bills"
+							name="expenses[]"
+							value="Vendor Bills"
+						/>
+						<label for="vendor-bills"
+							>Vendor Bills (Invoices from suppliers, utilities,
+							etc.)</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="business-expenses"
+							name="expenses[]"
+							value="Receipts for Business Expenses"
+						/>
+						<label for="business-expenses"
+							>Receipts for Business Expenses (Office supplies,
+							utilities, business-related travel, etc.)</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="depreciation"
+							name="expenses[]"
+							value="Depreciation Schedules"
+						/>
+						<label for="depreciation"
+							>Depreciation Schedules (For long-term assets like
+							equipment, vehicles, etc.)</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="rent-lease"
+							name="expenses[]"
+							value="Rent and Lease Agreements"
+						/>
+						<label for="rent-lease"
+							>Rent and Lease Agreements (For office, building, or
+							equipment rentals)</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="insurance"
+							name="expenses[]"
+							value="Business Insurance Premiums"
+						/>
+						<label for="insurance"
+							>Business Insurance Premiums (Receipts or statements
+							for any business insurance)</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="subscriptions"
+							name="expenses[]"
+							value="Subscription Payments"
+						/>
+						<label for="subscriptions"
+							>Subscription Payments (Software, memberships, or
+							online services)</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="employee-benefits"
+							name="expenses[]"
+							value="Employee Benefits and Deductions"
+						/>
+						<label for="employee-benefits"
+							>Employee Benefits and Deductions (Health insurance,
+							pension plans, etc.)</label
+						>
+					</div>
+				</div>
+
+				<div class="section" id="assets-and-liabilities">
+					<h2 class="subcategory">Assets and Liabilities</h2>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="balance-sheet"
+							name="assets-liabilities[]"
+							value="Balance Sheet"
+						/>
+						<label for="balance-sheet"
+							>Balance Sheet (To understand assets, liabilities,
+							and equity)</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="asset-register"
+							name="assets-liabilities[]"
+							value="Asset Register"
+						/>
+						<label for="asset-register"
+							>Asset Register (List of business assets, including
+							machinery, office equipment, etc.)</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="debt-schedules"
+							name="assets-liabilities[]"
+							value="Debt Schedules"
+						/>
+						<label for="debt-schedules"
+							>Debt Schedules (Details of any business loans or
+							liabilities)</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="investment-reports"
+							name="assets-liabilities[]"
+							value="Investment or Shareholder Reports"
+						/>
+						<label for="investment-reports"
+							>Investment or Shareholder Reports (If
+							applicable)</label
+						>
+					</div>
+				</div>
+
+				<div class="section" id="tax-and-compliance-documents">
+					<h2 class="subcategory">Tax and Compliance Documents</h2>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="vat-gst"
+							name="tax-compliance[]"
+							value="VAT/GST Returns"
+						/>
+						<label for="vat-gst"
+							>VAT/GST Returns (If the business is registered for
+							VAT/GST)</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="payroll-tax"
+							name="tax-compliance[]"
+							value="Payroll Tax Filings"
+						/>
+						<label for="payroll-tax"
+							>Payroll Tax Filings (Forms such as T4, W-2,
+							etc.)</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="estimated-tax"
+							name="tax-compliance[]"
+							value="Quarterly or Annual Estimated Tax Payments"
+						/>
+						<label for="estimated-tax"
+							>Quarterly or Annual Estimated Tax Payments (Proof
+							of payments made)</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="tax-deductions"
+							name="tax-compliance[]"
+							value="Tax Deductions & Credits"
+						/>
+						<label for="tax-deductions"
+							>Tax Deductions & Credits (Documentation for any
+							tax-saving initiatives or deductions)</label
+						>
+					</div>
+				</div>
+
+				<div class="section" id="other-documents">
+					<h2 class="subcategory">Other Documents</h2>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="financial-reports"
+							name="other-docs[]"
+							value="Internal Financial Reports"
+						/>
+						<label for="financial-reports"
+							>Internal Financial Reports (Profit and Loss
+							statement, Balance Sheet)</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="annual-budget"
+							name="other-docs[]"
+							value="Annual Budget"
+						/>
+						<label for="annual-budget"
+							>Annual Budget (If available)</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="licenses"
+							name="other-docs[]"
+							value="Business Licenses and Permits"
+						/>
+						<label for="licenses"
+							>Business Licenses and Permits (If
+							applicable)</label
+						>
+					</div>
+					<div class="checkbox-item">
+						<input
+							type="checkbox"
+							id="contracts"
+							name="other-docs[]"
+							value="Contracts"
+						/>
+						<label for="contracts"
+							>Contracts (For any large contracts or business
+							agreements)</label
+						>
+					</div>
+				</div>
+				<div class="contact-info">
+					<h3>Please Enter your contact information</h3>
+					<label for="name">Name</label>
+					<input id="name" type="text" required />
+					<label for="mail">Email</label>
+					<input id="mail" type="text" required />
+				</div>
+
+				<div class="submit-container">
+					<button type="submit" class="submit-btn">
+						Submit Checklist
+					</button>
+				</div>
+			</form>
+
+			<div
+				id="results"
+				style="
+					display: none;
+					margin-top: 30px;
+					padding: 20px;
+					background-color: #e8f5e8;
+					border-radius: 8px;
+				"
+			>
+				<h2>Selected Items Summary</h2>
+				<div id="resultsContent"></div>
+
+				<button
+					id="sendEmailBtn"
+					class="extract-btn"
+					onclick="sendMail()"
+				>
+					Send Email
+				</button>
+				<div
+					id="textOutput"
+					class="text-output"
+					style="display: none"
+				></div>
+			</div>
+		</div>
+		<script>
+			//   function fromChecklist{  document.getElementById('checklist').classList.add('hidden');
+			//     document.getElementById('summary').classList.add('active');
+			// }
+
+			// function backToChecklist() {
+			//     document.getElementById('summary').classList.remove('active');
+			//     document.getElementById('checklist').classList.remove('hidden');
+
+			let form = document.getElementById("checklistForm");
+			let submitBtn = document.getElementsByClassName("submit-btn");
+
+			form.addEventListener("submit", function (event) {
+				event.preventDefault();
+
+				const sections = [
+					"client-information",
+					"financial-documents",
+					"revenue-and-income",
+					"expenses-and-deductions",
+					"assets-and-liabilities",
+					"tax-and-compliance-documents",
+					"other-documents",
+				];
+
+				const results = {};
+
+				sections.forEach((sectionId) => {
+					const section = document.getElementById(sectionId);
+					// console.log(sectionId, section);
+					const checkboxes = section.querySelectorAll(
+						'input[type="checkbox"]:checked'
+					);
+					// queryselectorall returns a Nodelist containing all checked items under checkboxes
+					const sectionTitle =
+						section.querySelector("h2").textContent;
+
+					if (checkboxes.length > 0) {
+						results[sectionTitle] = [];
+						checkboxes.forEach((checkbox) => {
+							results[sectionTitle].push(checkbox.value);
+							// console.log(typeof results[sectionTitle]);
+						});
+					}
+				});
+				displayResults(results);
+				// sendMail();
+			});
+			// console.log(checkboxes);
+
+			// submitBtn.addEventListener("click", sendMail());
+			// Global variable to store plain text results
+			let plainTextSummary = "";
+
+			function displayResults(results) {
+				const resultsDiv = document.getElementById("results");
+				const resultsContent =
+					document.getElementById("resultsContent");
+
+				// Clear previous plain text summary
+				plainTextSummary = "";
+
+				if (Object.keys(results).length === 0) {
+					resultsContent.innerHTML = "<p>No items were selected.</p>";
+					plainTextSummary = "No items were selected.";
+				} else {
+					let html = "";
+
+					Object.keys(results).forEach((category) => {
+						html += '<div style="margin-bottom: 20px;">';
+						html +=
+							'<h3 style="color: #2c3e50; margin-bottom: 10px;">' +
+							category +
+							"</h3>";
+						html +=
+							'<ul style="list-style-type: none; padding-left: 0;">';
+
+						// Add category to plain text summary
+						plainTextSummary += category + ":" + "\n";
+
+						results[category].forEach((item) => {
+							html +=
+								'<li style="margin-bottom: 5px; padding: 5px; background-color: white; border-radius: 4px;">✓ ' +
+								item +
+								"</li>";
+
+							// Add item to plain text summary
+							plainTextSummary += " • " + item + "\n";
+						});
+
+						html += "</ul></div>";
+						plainTextSummary += "\n"; // Add spacing between categories
+					});
+
+					resultsContent.innerHTML = html;
+				}
+
+				resultsDiv.style.display = "block";
+				resultsDiv.scrollIntoView({ behavior: "smooth" });
+
+				// Log the plain text summary for debugging
+				console.log("Plain text summary:", plainTextSummary);
+			}
+
+			// Email function to send the checklist summary
+			const sendMail = () => {
+				let params = {
+					name: document.getElementById("name").value,
+					mail: document.getElementById("mail").value,
+					subject: "Client Request - Bookkeeping Checklist",
+					message: plainTextSummary,
+				};
+
+				console.log("Email params:", params);
+
+				emailjs
+					.send("service_", "template_", params)
+					.then(() => window.alert("Email sent!"))
+					.catch((error) => {
+						console.error("Email failed to send:", error);
+						window.alert("Failed to send email. Please try again.");
+					});
+			};
+		</script>
+		<!-- <script src="Index.js"></script> -->
+	</body>
+</html>
